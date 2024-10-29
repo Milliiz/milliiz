@@ -258,7 +258,7 @@ a:visited, a:active, a:hover {
     text-decoration: none;
 }
 .biz {
-    margin-top: -30px;
+    margin-top: -20px;
     display: flex; /* İçindeki bağlantıları yan yana yerleştirir */
     gap: 15px; /* Bağlantılar arasında boşluk */
     margin-right: 200px;
