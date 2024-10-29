@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milli İz Hareketi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@400&display=swap" rel="stylesheet"> <!-- Bu bağlantıyı ekleyin -->
+    <link rel="stylesheet" href="andimiz.css"> <!-- CSS dosyası yüklendi -->
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="img/fon.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Sağ üst köşedeki müzik kontrol butonu -->
+    <div id="music-control" onclick="toggleMusic()">🔊 Müziği Kapat</div>
+    
+   <!-- Navigation Bar -->
+    <header>
+        <nav>  
+            <ul>
+                <li class="kurdele">
+                    <a href="#"><img src="/img/kurdele.png" alt="Logo"></a>
+                </li>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="andimiz.html">Andımız</a></li>               
+                <li class="logo">
+                    <a href="index.html"><img src="img/image.png" alt="Logo"></a>
+                </li>
+                <li><a href="unutma.html">Unutma!</a></li>
+                
+                <li><a href="kahramanlarımız.html">Kahramanlarımız</a></li>
+            </ul>
+        </nav>
+    </header>   
+    <!-- Main Content Section -->
+    <main>
+        <div class="flex-container">
+            <div class="center-box">
+                <h1>Andımız</h1> 
+                <p>
+                    Türküm, doğruyum, çalışkanım,<br>
+                    İlkem: küçüklerimi korumak, büyüklerimi saymak, 
+                    yurdumu, milletimi özümden çok sevmektir.                
+                    Ülküm: yükselmek, ileri gitmektir.               
+                    Ey Büyük Atatürk!<br>
+                    Açtığın yolda, gösterdiğin hedefe durmadan yürüyeceğime ant içerim.<br>
+                    Varlığım Türk varlığına armağan olsun.<br>
+                    Ne mutlu Türküm diyene!            
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Milli İz</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/milliiz_com" target="_blank">
+                    <img src="/img/insta.webp" alt="Instagram" />
+                </a>
+                <a href="https://www.twitter.com/milli_iz" target="_blank">
+                    <img src="img/x.avif" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.getElementById('background-music');
+  const control = document.getElementById('music-control');
+
+  // Sayfa yüklenince butona ilk tıklamada müzik başlasın
+  control.addEventListener("click", function() {
+      if (audio.paused) {
+          audio.play();
+          control.textContent = '🔊 Müziği Kapat';
+      } else {
+          audio.pause();
+          control.textContent = '🔇 Müziği Aç';
+      }
+  });
+});
+
+</script>

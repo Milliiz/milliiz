@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milli İz Hareketi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@400&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <link rel="stylesheet" href="kahramanlarımız.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="img/fon.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div id="music-control" onclick="toggleMusic()">🔊 Müziği Kapat</div>
+    
+    <header>
+        <nav>  
+            <ul>
+                <li class="kurdele">
+                    <a href="#"><img src="/img/kurdele.png" alt="Logo"></a>
+                </li>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="andimiz.html">Andımız</a></li>               
+                <li class="logo">
+                    <a href="index.html"><img src="img/image.png" alt="Logo"></a>
+                </li>
+                <li><a href="unutma.html">Unutma!</a></li>
+                
+                <li><a href="kahramanlarımız.html">Kahramanlarımız</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main>
+        <div class="flex-container">
+            <div class="slideshow">
+                <div class="slides">
+                    <img src="https://i.imgur.com/xVGcVXG.jpg" alt="Görsel Açıklaması" />
+                    <img src="https://i.imgur.com/xVGcVXG.jpg" alt="Görsel Açıklaması" />
+                </div>
+            </div>
+            <div class="figure">
+                <img src="img/.png" alt="" class="character-figure" id="character-figure"> <!-- Default Figure -->
+            </divclass>
+            <div class="center-box">
+                
+                <h1>Milli Kahramanlarımız</h1> 
+                <p id="bio-text">
+                    Bize bu güzel vatanı korumayı görev olarak bırakan kahramanlarımız.
+                </p>
+             
+                <div id="names">
+                    <span class="name" data-figure="img/ataturk.png" onclick="showBio('bio1', this)">Mustafa Kemal Atatürk</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="img/inonu.png"  onclick="showBio('bio2', this)">İsmet İnönü</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="img/fevzi.png"  onclick="showBio('bio3', this)">Fevzi Çakmak</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="img/Kazim.png"  onclick="showBio('bio4', this)">Kazım Karabekir</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="img/halide.png"  onclick="showBio('bio5', this)">Halide Edip Adıvar</span>   
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="img/.png"  onclick="showBio('bio6', this)">Kadın Kahramanlarımız</span>
+                </div>
+                <img src="img/bayrak2.png" alt="" style="width: 48%; margin-top: 20px;">
+               <p> VE NİCE KAHRAMANLARIMIZ </p>
+            </div>
+        </div> 
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Milli İz</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/milliiz_com" target="_blank">
+                    <img src="/img/insta.webp" alt="Instagram" />
+                </a>
+                <a href="https://www.twitter.com/milli_iz" target="_blank">
+                    <img src="img/x.avif" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById('background-music');
+            const control = document.getElementById('music-control');
+
+            control.addEventListener("click", function() {
+                if (audio.paused) {
+                    audio.play();
+                    control.textContent = '🔊 Müziği Kapat';
+                } else {
+                    audio.pause();
+                    control.textContent = '🔇 Müziği Aç';
+                }
+            });
+        });
+
+        function showBio(bio, element) {
+    const bioText = document.getElementById('bio-text');
+    const figure = document.getElementById('character-figure');
+    const figureSrc = element.getAttribute('data-figure'); // Get the new figure source
+
+    switch(bio) {
+        case 'bio1':
+            bioText.innerHTML = `
+                <p>Mustafa Kemal Atatürk, Türk milletinin bağımsızlığı ve onuru için verdiği amansız mücadelelerle, tarih sahnesinde bir yıldız gibi parlayan bir liderdir. O, yalnızca bir asker değil, aynı zamanda ulusunu yeniden inşa eden bir inkılapçıdır.</p>
+                <p>Atatürk, “Türk milleti, işte bu kadar cesurdur!” diyerek, vatanseverliğin ve milliyetçiliğin özünü ortaya koymuştur. Osmanlı İmparatorluğu’nun son dönemlerinde yaşanan çöküş, Türk milletini derin bir karamsarlığa sürüklemişti. Ancak Atatürk, işgal altındaki vatan topraklarında, bağımsızlık ve hürriyet ateşini körüklemek için kararlı adımlar atarak ulusunu bir araya getirdi.</p>
+                <p>“Ya istiklal, ya ölüm!” parolası, bir milletin kaderini değiştirecek cesaretin ve azmin simgesiydi. Düşmanları karşısında durarak, vatan topraklarının her karışını kanıyla savunan bir kahraman olarak, halkına özgüven ve umut aşıladı. Kurtuluş Savaşı, Türk milletinin varoluş mücadelesiydi.</p>
+                <p>Atatürk, bu mücadelede sadece askeri bir lider olarak değil, aynı zamanda Türk milletinin ulusal kimliğini yeniden inşa eden bir önder olarak öne çıktı. 1923 yılında ilan edilen Türkiye Cumhuriyeti, onun azmi ve kararlılığıyla kuruldu. Bu yeni devlet, Türk milletinin bağımsızlık ve özgürlük arzusunun somut bir sonucuydu.</p>
+                <p>Atatürk’ün gerçekleştirdiği devrimler, sadece toplumsal yaşamı değil, aynı zamanda Türk milletinin ruhunu da yeniden şekillendirdi. Eğitimden hukuka, ekonomiden sosyal hayata kadar pek çok alanda yaptığı reformlarla, Türk milletinin çağdaş medeniyetler seviyesine ulaşması için büyük adımlar attı.</p>
+                <p>Özellikle kadın haklarına verdiği önem, Türk toplumunun modernleşme sürecinin en önemli unsurlarından biri oldu. Atatürk, “Dünyada her şey, kadının eseridir” diyerek, Türk kadınını toplumun en temel dinamiği olarak görmüş ve onların güçlü bir şekilde toplumda yer almasını sağlamıştır.</p>
+                <p>Dil devrimi, Türk milletinin kimliğini bulmasında ve ulusal bilincin güçlenmesinde büyük rol oynamıştır. Atatürk, Türk dilinin sadeleşmesi ve geliştirilmesi için büyük çaba harcamış, Türk Dil Kurumu'nu kurarak, milletine kendi kültürünü ve dilini sevdirmiştir.</p>
+                <p>“Türk milleti, dilinden kimliğine kadar kendi öz değerlerine sahip çıkmalıdır” sözü, onun milliyetçilik anlayışını net bir şekilde ortaya koymaktadır. Mustafa Kemal Atatürk, sadece bir lider değil, aynı zamanda Türk milletinin özüdür.</p>
+                <p>Onun vizyonu, bağımsızlık ve özgürlük için mücadele eden bir ulusun yeniden doğuşunu simgeler. Bugün bizlere düşen görev, Atatürk’ün mirasını korumak ve yaşatmaktır. “En büyük eserim” dediği Türkiye Cumhuriyeti, Türk milletinin azmi ve kararlılığı ile daha da ileriye taşınmalıdır.</p>
+                <p>Bizler, onun bize bıraktığı bu kutsal emaneti, sonsuza dek yaşatmak ve daha da güçlendirmek için çalışmalıyız. Atatürk, milletinin kalbinde sonsuza dek yaşayacak bir kahramandır. Onun düşünceleri ve idealleri, Türk milletinin geleceğini aydınlatmaya devam edecektir.</p>
+                <p>Bugün bizler, onun çizdiği yolda yürüyerek, bağımsız ve onurlu bir Türk milleti olmanın gururunu taşımaktayız. İşte bu, Atatürk’ün bize kazandırdığı en değerli miras ve en büyük sorumluluktur. Ne mutlu Türküm diyene!</p>
+            `;
+            break;
+            case 'bio2':
+    bioText.innerHTML = `
+        <p>İsmet İnönü, Türkiye Cumhuriyeti’nin ikinci Cumhurbaşkanı ve Atatürk’ün en yakın silah arkadaşı olarak Türk milletinin bağımsızlık mücadelesinde ve Cumhuriyet’in kuruluşunda büyük bir rol oynamıştır. Onun liderliği, sadece bir devlet adamı olmanın ötesinde, vatanseverliğin, milliyetçiliğin ve kararlılığın bir simgesi haline gelmiştir. İnönü, her zaman Türk milletinin çıkarlarını ön planda tutarak, ülkesinin geleceği için fedakârlık yapmaktan kaçınmamıştır.</p>
+        <p>İnönü, Kurtuluş Savaşı yıllarında Atatürk ile birlikte ulusal direnişin en ön saflarında yer aldı. Sakarya Meydan Muharebesi ve Büyük Taarruz gibi zaferlerle, düşmanları yenerek Türk milletinin bağımsızlığını sağlamak için büyük bir azim gösterdi. Bu savaşlar, yalnızca askeri başarılar değil, aynı zamanda bir milletin özgürlük arzusunun somutlaşmasıydı. İnönü’nün cesareti ve liderliği, Türk halkına umut aşılayarak, onların bağımsızlık mücadelesini güçlendirdi.</p>
+        <p>Cumhuriyet’in ilanından sonra, İsmet İnönü, ülkenin iç ve dış politikalarında büyük sorumluluklar üstlendi. Atatürk’ün devrimlerini sahiplenerek, bu reformların kesintisiz bir şekilde sürdürülmesini sağladı. Ekonomik ve sosyal alanlarda yapılan çalışmalar, Türk milletinin çağdaş medeniyetler seviyesine ulaşması için büyük bir çaba sarf ettiğinin göstergesiydi. Bu dönemde, halkın refahını artırmak ve Türkiye’yi modern bir devlet haline getirmek için önemli adımlar atıldı.</p>
+        <p>İnönü’nün milliyetçilik anlayışı, bağımsızlık ve özgürlük arzusuyla birleşerek, Türk milletinin değerlerine sahip çıkma misyonunu pekiştirdi. “Halk, bağımsızlığını ve onurunu korumalıdır” diyerek, her zaman Türk milletinin iradesine büyük bir saygı gösterdi. O, milletinin menfaatlerini her şeyin üzerinde tutarak, ulusunun birliği ve dirliğini sağlamak için çalıştı. Onun döneminde, Türk toplumunun gelişimi ve ilerlemesi için birçok reform yapıldı; eğitim, sanayi ve tarım gibi alanlarda önemli yatırımlar gerçekleştirildi.</p>
+        <p>İsmet İnönü, aynı zamanda Türkiye’nin uluslararası arenada tanınmasında da büyük rol oynamıştır. Barışçıl bir dış politika benimseyerek, Türkiye’nin bağımsızlık ve egemenlik haklarını korumuş, uluslararası ilişkilerde önemli başarılar elde etmiştir. “Yurtta sulh, cihanda sulh” ilkesi, onun barışçıl tutumunun en güzel örneğidir. İnönü, Türk milletinin çıkarlarını savunurken, aynı zamanda dünya barışına da katkıda bulunmayı hedeflemiştir.</p>
+      `;
+        break;
+        case 'bio3':
+    bioText.innerHTML = `
+        <p>Fevzi Çakmak, Türk milletinin bağımsızlık mücadelesinin simgelerinden biri olarak, cesareti ve kararlılığı ile tarih sahnesinde önemli bir yer edinmiştir. Genç yaşlardan itibaren askerlik mesleğine duyduğu tutkuyla, Türk Silahlı Kuvvetleri’nin önde gelen komutanlarından biri olmuştur. Türk milletine olan derin bağlılığı ve vatanseverliği, Kurtuluş Savaşı döneminde sergilediği kahramanlıklarla açığa çıkmıştır.</p> <p>Kurtuluş Savaşı’nın en çetin dönemlerinde, Fevzi Çakmak, Türk ordusunun başkomutanı olarak, vatanın dört bir yanındaki işgal kuvvetlerine karşı koymak için var gücüyle mücadele etmiştir. Sakarya Meydan Muharebesi, onun askeri dehasını ve kararlılığını gösteren en önemli savaşlardan biridir. Düşman karşısında sergilediği stratejik zekâ ve cesaret, Türk milletinin bağımsızlık umudunu yeşertmiş, orduya moral vermiştir. Bu savaşta, Türk milletinin özgürlüğü için verdiği mücadele, ona yalnızca askeri bir lider olmanın ötesinde, bir vatansever kahraman unvanı kazandırmıştır.</p> <p>Fevzi Çakmak’ın millî mücadeledeki rolü, sadece askeri stratejilerle sınırlı kalmamış, aynı zamanda Türk milletinin moral kaynağı olmuştur. Düşman işgali altındaki Anadolu’nun her köşesinde, Türk milletinin onurunu ve bağımsızlığını koruma hedefiyle hareket etmiştir. Her zaman milletin yanında durarak, halkın umutlarını tazelemiş, birlikte hareket etmenin gücünü vurgulamıştır. “Ya istiklal, ya ölüm!” anlayışıyla yola çıkan Türk milletinin ruhunu, kendi cesaretiyle pekiştirmiştir.</p> <p>Cumhuriyet’in ilanından sonra, Fevzi Çakmak, Türk Silahlı Kuvvetleri’nin yeniden yapılandırılmasında ve modernleşmesinde büyük bir liderlik göstermiştir. Askeri eğitim sistemini güçlendirmiş, Türk ordusunun dünya standartlarında bir ordu haline gelmesi için çaba göstermiştir. Onun vizyonu, yalnızca bir askeri güç oluşturmak değil, aynı zamanda vatanseverliği ve milli bilinci güçlendirmektir. Eğitimli bir neslin, bağımsız bir vatanın en önemli teminatı olduğuna inanmış, bu yönde adımlar atmıştır.</p> <p>Fevzi Çakmak’ın vatanseverliği, milli değerlere olan bağlılığıyla birleşmiştir. O, Türk milletinin kültürel mirasına sahip çıkmayı ve kendi kimliğini korumayı her şeyin önünde tutmuştur. Türk halkının birliğini sağlamak, bağımsızlık ve özgürlük duygusunu güçlendirmek için çalışmış, her zaman milli ruhu yüceltmiştir. “Türk milleti, özgür ve bağımsız bir millet olarak yaşamalıdır.” anlayışı, onun yaşam felsefesi haline gelmiştir.</p> <p>Fevzi Çakmak, Türk milletinin bağımsızlık mücadelesinin önderlerinden biri olarak, özgürlüğün ve bağımsızlığın değerini çok iyi bilmiştir. Onun azmi, inancı ve vatanseverliği, Türk milletinin hafızasında ölümsüzleşmiş, geleceğe dair umut aşılamıştır. Türkiye Cumhuriyeti’nin kuruluş yıllarında verdiği katkılar, bugünkü güçlü Türkiye’nin inşasında önemli bir rol oynamıştır. Fevzi Çakmak, yalnızca bir askeri lider değil, aynı zamanda Türk milletinin kalbinde sonsuza dek yaşayacak bir kahramandır.</p>
+      `;
+        break;
+        case 'bio4':
+    bioText.innerHTML = `
+        <p>Kazım Karabekir, Türk milletinin bağımsızlık mücadelesinde gösterdiği kahramanlık ve ileri görüşlülükle tarihte özel bir yer edinmiş bir liderdir. Askeri dehası, vatanseverliği ve Türk milletine duyduğu derin bağlılık, onun Türkiye Cumhuriyeti’nin temel taşlarından biri olmasını sağlamıştır. Kurtuluş Savaşı’nda üstlendiği hayati rol, Türk milletinin bağımsızlık yolculuğunda unutulmaz izler bırakmıştır. Atatürk'ün yanında, ülkesinin özgürlüğü için cepheden cepheye koşarak milli mücadeleyi desteklemiş, ordusunu zaferlere taşıyarak Türk halkına büyük umutlar kazandırmıştır.</p> <p>Kazım Karabekir, özellikle Doğu Anadolu’da işgale karşı Türk direnişini örgütleyerek, Türk milletinin onurunu korumak için var gücüyle çalıştı. Erzurum ve çevresindeki direnişi sağlamlaştırarak, bölgenin işgale karşı savunulmasını organize etti. Bu süreçte, halkın desteğini arkasına alarak, düşman güçlerine karşı kararlı bir duruş sergiledi. Milli Mücadele’ye gönülden bağlılığı, onu her türlü fedakarlığı yapmaya itmiş, Türk milletinin bağımsızlık sevdasına katkı sağlamıştır.</p> <p>Cumhuriyet’in ilanından sonra Karabekir, eğitim ve kalkınma projeleriyle ülkesinin geleceği için önemli adımlar attı. Çocuklara ve gençlere duyduğu inançla, onların eğitimi ve milli bilincinin güçlenmesi için girişimlerde bulundu. Özellikle yetim çocuklara sahip çıkarak onlara yeni bir hayat sundu ve Türkiye’nin kalkınmasında eğitimli bir genç neslin önemini vurguladı. O, sadece bir asker değil, aynı zamanda toplumun her kesiminde olumlu etkiler bırakmak isteyen bir aydın olarak da iz bıraktı.</p> <p>Kazım Karabekir’in milliyetçilik anlayışı, halkına duyduğu sevgi ve saygıya dayanıyordu. O, milletini koruma ve kalkındırma görevini her şeyin önünde tutan bir liderdi. Türk milletinin kendi değerleriyle, güçlü ve bağımsız bir geleceğe yürümesi gerektiğine inanan Karabekir, bu yolda özverili bir şekilde çalıştı. Milletin birliğini sağlamaya ve kendi kültürel mirasına sahip çıkmaya yönelik çabaları, onun vatanseverliğinin ve milliyetçiliğinin temelini oluşturuyordu.</p> <p>Kazım Karabekir, Türkiye’nin bağımsızlığını savunan ve ülkesini modernleştirmeye yönelik çalışmalar yapan bir kahraman olarak her zaman hatırlanacaktır. Onun azmi ve idealleri, Türk milletinin bağımsızlık ve kalkınma yolundaki en güçlü ilham kaynaklarından biridir. Türkiye Cumhuriyeti’nin ilk yıllarında verdiği katkılar, bugünkü güçlü Türkiye’nin inşasında önemli bir yer tutmaktadır.</p>`;
+        break;
+        case 'bio5':
+    bioText.innerHTML = `
+       <p>Halide Edib Adıvar, Türk milletinin bağımsızlık mücadelesinde önemli bir figür olarak öne çıkmış bir yazar ve liderdir. 1884 yılında İstanbul’da doğan Halide Edib, eğitim alanındaki yenilikçi fikirleri ve edebi eserleriyle dikkat çekmiştir. "Ateşten Gömlek" adlı romanında Kurtuluş Savaşı döneminin zorluklarını ve kadınların bu süreçteki rollerini etkileyici bir dille anlatmıştır. Yazarlık kariyeri boyunca, Türk toplumunda kadın-erkek eşitliği ve milli bilinçlenme konularına vurgu yaparak, toplumsal değişim için mücadele etmiştir.</p> <p>Kurtuluş Savaşı sırasında, Anadolu’ya giderek halkı cesaretlendirmiş, cephede yaralı askerlere yardım etmiş ve milli direnişi desteklemiştir. “Sizler de vatan için savaşmalısınız!” diyerek, kadınların bu mücadelede aktif bir rol alması gerektiğini savunmuş, onlara ilham vermiştir. Halide Edib’in bu özverili çalışmaları, kadınların savaşta ve sonrasında toplumsal hayatta yer almalarını sağlamış, onlara cesaret aşılamıştır.</p> <p>Cumhuriyet’in ilanından sonra, Halide Edib, Türk kadınlarının siyasi ve sosyal hayatta daha fazla yer alması için mücadele etmeye devam etmiştir. TBMM’ye girerek, kadınların eğitimine ve toplumsal hayata katılımına öncülük etmiştir. Halide Edib Adıvar, Türk milletinin bağımsızlık mücadelesinde gösterdiği üstün gayret ve azimle, Türk kadınlarının sembolü haline gelmiştir. Onun vatanseverlik anlayışı, Türk milletinin geleceğine olan inancı ile şekillenmiş ve unutulmaz bir miras bırakmıştır.</p>`;
+        break;
+
+        case 'bio6':
+            bioText.innerHTML = `
+    Nezahat Kuman
+    <p>Nezahat Kuman, Kurtuluş Savaşı sırasında genç yaşına rağmen büyük bir cesaret göstererek cepheye koşan bir kahramandır. Kurtuluş Savaşı'na katılmak için gönüllü olarak hemşirelik yapmış ve savaş alanında yaralı askerlere yardım etmiştir. Kuman, savaşın zorluklarına rağmen vatanseverliğini hiçbir zaman kaybetmemiş, Türk kadınlarının savaşta nasıl aktif bir rol oynayabileceğini göstermiştir. Yaralı askerlerin bakımında ve cephanelik hizmetlerinde bulunarak, savaşın arka planındaki fedakârlığı simgelemiştir.</p>
+    Şerife Bacı
+    <p>Şerife Bacı, milli mücadele döneminde gösterdiği cesaretle tanınan bir kahramandır. Sivas’ta yaşayan Şerife Bacı, cepheye giden askerleri desteklemek amacıyla cepheye mermi taşımış ve savaşın en zor zamanlarında erkeklerin yanında yer alarak vatanına olan bağlılığını göstermiştir. Kendisi, kadınların da vatan savunmasında yer alabileceğinin en güzel örneklerinden biridir. Şerife Bacı, savaşın zorlu koşullarında bile yılmadan, azimle vatanına hizmet etmiştir.</p>
+    Fatma Seher Hanım (Kara Fatma)
+    <p>Kara Fatma, Kurtuluş Savaşı’nda gösterdiği kahramanlıklarla tanınan bir başka kadın figürüdür. Hemşire olarak savaş alanında görev almış, yaralı askerleri tedavi etmiştir. Ancak, Kara Fatma’nın en dikkat çekici özelliği, aynı zamanda bir muharip olarak cepheye katılmasıdır. Düşmanla savaşırken gösterdiği cesaret ve kahramanlık, onu Anadolu kadınlarının sembolü haline getirmiştir. Özellikle Sakarya Meydan Muharebesi’nde gösterdiği cesaretle, Türk milletine ilham vermiştir.</p>
+    Emine Apak
+    <p>Emine Apak, Kurtuluş Savaşı döneminde Anadolu’da, özellikle İzmir ve çevresindeki köylerde savaşan kadın kahramanlardan biridir. Emine Hanım, savaşın getirdiği zorluklara rağmen köy halkını organize ederek düşman karşısında direnişi sağlamlaştırmış, genç kadınların da milli mücadelede yer alması için çaba sarf etmiştir. Vatanına olan bağlılığı ve cesareti, onun döneminin önemli kadın liderlerinden biri olmasını sağlamıştır.</p>`;
+    break;        
+default:
+            bioText.innerHTML = 'Bize bu güzel vatanı korumayı görev olarak bırakan kahramanlarımız.';
+    }
+
+    figure.src = figureSrc; // Change the figure image
+}
+    // Example function to enable/disable scrolling
+    function toggleScroll() {
+        document.body.classList.toggle('no-scroll');
+    }
+
+    // Call toggleScroll() when you need to enable or disable scrolling
+    // For example, you can call it when a button is clicked:
+    document.getElementById('music-control').onclick = function() {
+        toggleScroll(); // Disable scrolling when the music control is clicked
+    };
+
+    const names = document.querySelectorAll('.name'); // Select all name elements
+
+names.forEach(name => {
+    name.addEventListener('click', function() {
+        // Here you should handle the text change for the center box
+        // Example: centerBox.textContent = "New Text"; // Change this line as per your logic
+        
+        // Scroll to the top of the center box
+        const centerBox = document.querySelector('.center-box');
+        centerBox.scrollTop = 0; // Set scroll position to the top
+    });
+});
+    </script>
+</body>
+</html>

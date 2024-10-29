@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pridi', Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Elemanları dikey hizala */
+    min-height: 100vh; /* Tam görünüm yüksekliği */
+    overflow: hidden; /* Taşmayı gizler */
+}
+
+header {
+    background-color: #640000;
+    padding: 5px 0;
+    z-index: 1; /* Başlığın diğer içeriklerin üstünde kalmasını sağlar */
+}
+
+footer {
+    background-color: #640000;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;                     /* Use Flexbox for layout */
+    justify-content: space-between;    /* Space between text and icons */
+    align-items: center;               /* Center items vertically */
+    max-width: 1200px;                /* Optional: max width for the footer */
+    margin: 0 auto;                   /* Center the footer content */
+    position: relative;                /* Position relative for absolute centering */
+}
+
+.footer-text {
+    flex: 1;                           /* Allow text to take available space */
+    text-align: center;                /* Center the text */
+}
+
+.social-media {
+    display: flex;                     /* Use Flexbox for social media icons */
+}
+
+.social-media a {
+    margin-left: 10px;                /* Space between icons */
+}
+
+.social-media img {
+    width: 24px;                      /* Adjust size as needed */
+    height: 24px;
+    vertical-align: middle;           /* Aligns icon with text */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between menu items */
+}
+
+.kurdele {
+    position: absolute;
+    left: 10px; /* Fixed to the left */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dcdcdc;
+}
+
+.kurdele img {
+    width: 50px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+
+/* Flex container to center the content */
+.flex-container {
+    display: flex;
+    position: relative; /* Konumlandırma için gerekli */
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px - 80px); /* Tam görünüm yüksekliği - başlık ve altbilgi yüksekliği */
+}
+
+.background-video {
+    position: absolute; /* Konumlandırma için */
+    top: 50%; /* Dikey ortalama */
+    left: 50%; /* Yatay ortalama */
+    min-width: 110%; /* Tam genişlik */
+    min-height: 110%; /* Tam yükseklik */
+    width: auto; /* Otomatik genişlik */
+    height: auto; /* Otomatik yükseklik */
+    transform: translate(-50%, -50%); /* Tam ortalama */
+    z-index: -1; /* Arka planda kalması için */
+    object-fit: cover; /* Videonun alanı kaplamasını sağlar */
+    filter: blur(8px); /* Bulanıklık efekti ekler */
+}
+
+/* Center box for image gallery */
+.center-box {
+    margin-top: -40px;
+    width: 680px;                 /* Görsel konteyneri için sabit genişlik */
+    height: 450px;                /* Görselleri çerçevelemek için yükseklik */
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;             /* Taşan kısmı gizler */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;           /* İçerik animasyonu için gerekli */
+}
+
+/* Styling for image gallery */
+.image-gallery img {
+    width: 100%;                 /* Konteynerin tam genişliği */
+    height: 700px;               /* Görselin sabit yüksekliği, daha fazla kesilme için artırıldı */
+    margin-bottom: 10px;         /* Alt boşluk */
+    object-fit: cover;           /* Görsellerin alt ve üstten kesilmesini sağlar */
+    animation: scroll-gallery 100s linear infinite; /* Görseller için animasyon */
+
+}
+@keyframes scroll-gallery {
+    0% {
+        transform: translateY(0);        /* Başlangıç konumu */
+    }
+    100% {
+        transform: translateY(-100%);    /* Görsellerin tamamını yukarı kaydır */
+    }
+}
+
+h1 {
+    font-family: 'Pridi', serif; /* Pridi fontunu h1 başlığı için ekleyin */
+    font-weight: 800; /* Extra Bold için kalınlık ayarı */
+    font-size: 2.5em; /* Başlık boyutu */
+    color: #000000; /* Temaya uygun renk */
+    text-align: center; /* Solda hizala */
+    margin: 20px 20px; /* Yukarı ve aşağı boşluk, sağdan boşluk ekle */
+    text-transform: uppercase; /* Harfleri büyük yapar */
+    font-family: 'Pridi', Arial, sans-serif;
+
+}
+
+#music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 1000; /* Üstte görünmesini sağlar */
+    transition: background-color 0.3s;
+}
+
+#music-control:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}

@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pridi', serif;
+}
+
+body.no-scroll {
+    overflow: hidden; /* Disable scrolling */
+}
+
+body {
+    font-family: 'Pridi', Arial, sans-serif;
+    color: #fff;
+    background-color: #f4f4f4; /* Light background for contrast */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background-color: #640000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dcdcdc;
+}
+
+.logo img {
+    width: 50px;
+}
+
+/* Ribbon */
+.kurdele img {
+    width: 50px;
+    position: absolute;
+    left: 10px;
+    margin-top: -25px;
+}
+
+/* Main Content Styling */
+main {
+    font-family: 'Pridi', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Slideshow */
+.slideshow {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.slides {
+    display: flex;
+    width: calc(200%);
+}
+
+.slides img {
+    position: relative;
+    width: 240vw;
+    height: auto;
+    filter: blur(1.5px) brightness(0.4);
+    margin-bottom: 24px;
+}
+
+@keyframes slide {
+    0%, 10% { transform: translateX(0); }
+    90%, 100% { transform: translateX(-100%); }
+}
+
+.center-box { 
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #640000;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    height: 75%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-y: auto;
+}
+
+.character-figure {
+    position: fixed;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    z-index: 1;
+}
+
+.center-box h1 {
+    margin-bottom: 15px;
+}
+
+.center-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsive Name Links */
+#names {
+    margin-top: 15px;
+}
+
+.name {
+    color: #640000;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.name:hover {
+    color: #dcdcdc;
+}
+
+.separator {
+    color: #640000;
+    margin: 0 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #640000;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Music Control Button */
+#music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .center-box {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .character-figure {
+        width: 180px;
+        left: 6%;
+    }
+
+    nav ul li {
+        padding: 0 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-box {
+        width: 95%;
+        max-width: 600px;
+        left: 50%;
+    }
+
+    .character-figure {
+        width: 150px;
+        top: 45%;
+        left: 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .character-figure {
+        width: 120px;
+        top: 40%;
+    }
+
+    nav ul li {
+        padding: 8px 0;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+}

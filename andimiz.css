@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pridi', Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #640000;
+    padding: 5px 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between menu items */
+}
+
+.kurdele {
+    position: absolute;
+    left: 10px; /* Fixed to the left */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dcdcdc;
+}
+
+.kurdele img {
+    width: 50px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+
+/* Centered Box */
+.center-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #640000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Main Content Styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.flex-container {
+    background-image: url("img/tasarım.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Center the box absolutely */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-box p {
+    margin-top: -23px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+footer {
+    background-color: #640000;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;                     /* Use Flexbox for layout */
+    justify-content: space-between;    /* Space between text and icons */
+    align-items: center;               /* Center items vertically */
+    max-width: 1200px;                /* Optional: max width for the footer */
+    margin: 0 auto;                   /* Center the footer content */
+    position: relative;                /* Position relative for absolute centering */
+}
+
+.footer-text {
+    flex: 1;                           /* Allow text to take available space */
+    text-align: center;                /* Center the text */
+}
+
+.social-media {
+    display: flex;                     /* Use Flexbox for social media icons */
+}
+
+.social-media a {
+    margin-left: 10px;                /* Space between icons */
+}
+
+.social-media img {
+    width: 24px;                      /* Adjust size as needed */
+    height: 24px;
+    vertical-align: middle;           /* Aligns icon with text */
+}
+
+
+#music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 9999;
+    transition: background-color 0.3s;
+}
+
+#music-control:hover {
+    background-color: #555;
+}

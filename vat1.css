@@ -1,0 +1,344 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pridi', Arial, sans-serif;
+}
+
+body {
+    background-color: #8b0000;
+    color: #fff;
+}
+
+header {
+    background-color: #640000;
+    padding: 5px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between menu items */
+}
+
+.kurdele {
+    position: absolute;
+    left: 10px; /* Fixed to the left */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dcdcdc;
+}
+
+.kurdele img {
+    width: 50px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+
+/* Flex container */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between items */
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Left Side (yan1) */
+.yan1 {
+    width: 20%;
+    margin-top: 70px;
+    border-radius: 3px;
+}
+
+/* Middle section with Slideshow */
+.content-section2 {
+    width: 60%; /* Keep it 60% for larger screens */
+    margin: 0 20px;
+    margin-top: 110px;
+    position: relative;
+}
+.mySlides {
+    height: 450px; /* Keep this to maintain overall slideshow height */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 0, 0, 0.8)), url('img/eskitme-doku.png') no-repeat center center;
+    background-size: cover;
+    border: 8px solid rgb(168, 130, 72);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden; /* Ensures that content does not overflow */
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto; /* Change this to auto to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the full area without distortion */
+}
+.mySlides video {
+    width: 100%;
+    height: auto; /* Change this to auto to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the full area without distortion */
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Right Side (yan2) */
+.yan2 {
+    width: 20%;
+    margin-top: 70px;
+    border-radius: 3px;
+}
+
+/* Cards */
+.content-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.card {
+    background-color: #640000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px; /* Add some spacing between rows */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+footer {
+    background-color: #640000;
+    padding: 15px;
+}
+
+.footer-content {
+    display: flex;                     /* Use Flexbox for layout */
+    justify-content: space-between;    /* Space between text and icons */
+    align-items: center;               /* Center items vertically */
+    max-width: 1200px;                /* Optional: max width for the footer */
+    margin: 0 auto;                   /* Center the footer content */
+    position: relative;                /* Position relative for absolute centering */
+}
+
+.footer-text {
+    flex: 1;                           /* Allow text to take available space */
+    text-align: center;                /* Center the text */
+}
+
+.social-media {
+    display: flex;                     /* Use Flexbox for social media icons */
+}
+
+.social-media a {
+    margin-left: 10px;                /* Space between icons */
+}
+
+.social-media img {
+    width: 24px;                      /* Adjust size as needed */
+    height: 24px;
+    vertical-align: middle;           /* Aligns icon with text */
+}
+
+/* Music Control */
+#music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+#music-control:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Links */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited, a:active, a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a img {
+    transition: transform 0.3s ease;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+
+/* Tablet */
+@media (max-width: 768px) {
+    nav ul li {
+        padding: 0 10px;
+    }
+
+    .kurdele img {
+        margin-left: -50px;
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stacks elements on top of each other */
+        align-items: center;
+    }
+
+    .yan1, .yan2 {
+        width: 100%; /* Full width for side images */
+        margin-top: 30px;
+    }
+
+    .content-section2 {
+        width: 100%; /* Full width for content section */
+        margin: 20px 0; /* Space above and below */
+    }
+
+    .card {
+        width: 90%; /* Make cards take more width */
+    }
+
+    #music-control {
+        font-size: 0.8em;
+        padding: 8px 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stacks navigation items */
+    }
+
+    .kurdele img {
+        margin-left: 0;
+    }
+
+    .yan1, .yan2 {
+        margin-top: 10px;
+    }
+
+    .content-section2 {
+        width: 100%; /* Full width for content section */
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 100%; /* Cards take full width */
+        padding: 15px;
+    }
+
+    #music-control {
+        font-size: 0.7em;
+        padding: 5px 8px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+/* Notification Popup Styles */
+#notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dimmed background */
+    backdrop-filter: blur(5px); /* Blur effect */
+    z-index: 9999; /* On top of other content */
+}
+
+.notification-content {
+    background: #fff;
+    border: 2px solid #640000; /* White border */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    text-align: center;
+    position: relative; /* To position close button */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.notification-content h2 {
+    margin-bottom: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #640000; /* Color of close button */
+}
+
+/* Responsive Adjustments for Notification */
+@media (max-width: 480px) {
+    #notification {
+        padding: 10px; /* Adjust padding for small screens */
+    }
+    
+    .notification-content {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
