@@ -12,7 +12,7 @@ body.no-scroll {
 
 body {
     font-family: 'Pridi', Arial, sans-serif;
-    color: #fff;
+    background-color: #8b0000;   
     background-color: #f4f4f4; /* Light background for contrast */
     height: 100vh;
     display: flex;

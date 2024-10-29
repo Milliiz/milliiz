@@ -47,3 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('notification').style.display = 'none';
         }
 
+
+  document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
