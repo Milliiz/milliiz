@@ -344,21 +344,22 @@ a img:hover {
 
 
 a {
-    color: white;
+    color: fff;   
     text-decoration: none;
 }
 
 a:visited, a:active, a:hover {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 .biz {
-    margin-top: -25px;
+    margin-top: -35px;
     display: flex; /* İçindeki bağlantıları yan yana yerleştirir */
     gap: 15px; /* Bağlantılar arasında boşluk */
     margin-right: 200px;
 }
 .footer a {
+    color: #fff;
     margin-left: 100px;
     font-size: 0.8em;
 }
