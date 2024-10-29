@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ body {
 
 header {
     background-color: #640000;
-    padding: 5px 0;
+    padding: 10px 20px; /* Add some padding for better spacing */
     z-index: 1;
 }
 
@@ -24,6 +25,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 nav ul {
@@ -56,14 +58,14 @@ nav ul li a:hover {
     width: 50px;
 }
 
-
 /* Centered Box */
 .center-box {
     background-color: rgba(255, 255, 255, 0.9);
     color: #640000;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 50%; /* Default width */
+    max-width: 600px; /* Maximum width for larger screens */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -94,7 +96,17 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 90%;
+    max-height: 90%; /* Maksimum yüksekliği %90 olarak ayarladık */
+    overflow-y: auto; /* Dikey kaydırma çubuğunu ekle */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #640000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
 
 .center-box p {
     margin-top: -23px;
@@ -137,21 +149,97 @@ footer {
     vertical-align: middle;           /* Aligns icon with text */
 }
 
-
 #music-control {
     position: fixed;
     top: 20px;
     right: 20px;
     background-color: #333;
     color: #fff;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Default padding */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em;
+    font-size: 0.9em; /* Default font size */
     z-index: 9999;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, padding 0.3s, font-size 0.3s; /* Added transition for padding and font size */
 }
 
 #music-control:hover {
     background-color: #555;
+}
+
+/* Responsive Adjustments */
+
+/* Tablet */
+@media (max-width: 768px) {
+    nav ul li {
+        padding: 0 10px;
+    }
+
+    .kurdele img {
+        margin-left: -30px; /* Adjust as necessary */
+    }
+
+    .center-box {
+        width: 80%; /* Wider on smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    #music-control {
+        font-size: 0.85em; /* Slightly smaller font size */
+        padding: 8px 12px; /* Adjust padding for the button */
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stacks navigation items */
+        align-items: center; /* Center items */
+    }
+
+    .kurdele img {
+        margin-left: 0;
+    }
+
+    .center-box {
+        width: 90%; /* Full width for smaller screens */
+        padding: 10px; /* Further adjusted padding */
+    }
+
+    #music-control {
+        font-size: 0.75em; /* Smaller font size */
+        padding: 6px 10px; /* Adjusted padding */
+        top: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+
+/* Responsive Name Links */
+#names {
+    margin-top: 15px;
+}
+
+.name {
+    color: #640000;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.name:hover {
+    color: #dcdcdc;
+}
+
+.separator {
+    color: #640000;
+    margin: 0 5px;
 }

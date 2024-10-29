@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milli İz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="andimiz.css"> 
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="img/fon.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div id="music-control" onclick="toggleMusic()">🔊 Müziği Kapat</div>
+    
+    <header>
+        <nav>  
+            <ul>
+                <li class="kurdele">
+                    <a href="#"><img src="/img/kurdele.png" alt="Logo"></a>
+                </li>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="oku.html">Okuyun, Okutun!</a></li>      
+                <li class="logo">
+                    <a href="index.html"><img src="img/image.png" alt="Logo"></a>
+                </li>
+                <li><a href="unutma.html">Unutma!</a></li>
+                <li><a href="kahramanlarımız.html">Kahramanlarımız</a></li>
+            </ul>
+        </nav>
+    </header>   
+    
+    <main>
+        <div class="flex-container">
+            <div class="center-box">
+               
+                <p id="bio-text">
+                    OKUYUN, OKUTUN!
+                </p>
+                <div id="names">
+                    <span class="name" data-figure="#" onclick="showBio('bio1', this)">İstiklal Marşı</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="#"  onclick="showBio('bio2', this)">Andımız</span>
+                    <span class="separator">|</span>
+                    <span class="name" data-figure="#"  onclick="showBio('bio3', this)">Gençliğe Hitabe</span>
+                    <span class="separator">|</span>
+
+                </div>
+                <img src="img/bayrak2.png" alt="" style="width: 48%; margin-top: 20px;">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">Milli İz</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/milliiz_com" target="_blank">
+                    <img src="/img/insta.png" alt="Instagram" />
+                </a>
+                <a href="https://www.twitter.com/milli_iz" target="_blank">
+                    <img src="img/x.avif" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById('background-music');
+        const control = document.getElementById('music-control');
+
+        control.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                control.textContent = '🔊 Müziği Kapat';
+            } else {
+                audio.pause();
+                control.textContent = '🔇 Müziği Aç';
+            }
+        });
+    });
+
+
+    function showBio(bio, element) {
+    const bioText = document.getElementById('bio-text');
+    const figure = document.getElementById('character-figure');
+    const figureSrc = element.getAttribute('data-figure'); // Get the new figure source
+
+    switch(bio) {
+        case 'bio1':
+            bioText.innerHTML = ` 
+            <h1>İSTİKLAL MARŞI</h1>
+<p>Korkma! Sönmez bu şafaklarda yüzen al sancak,
+Sönmeden yurdumun üstünde tüten en son ocak.
+O benim milletimin yıldızıdır, parlayacak;
+O benimdir, o benim milletimindir ancak.</p>
+
+<p>Çatma, kurban olayım, çehreni ey nazlı hilal!
+Kahraman ırkıma bir gül; ne bu şiddet, bu celal?
+Sana olmaz dökülen kanlarımız sonra helal…
+Hakkıdır, Hakk’a tapan milletimin istiklal.</p>
+
+<p>Ben ezelden beridir hür yaşadım, hür yaşarım,
+Hangi çılgın bana zincir vuracakmış? Şaşarım.
+Kükremiş sel gibiyim, bendimi çiğner, aşarım,
+Yırtarım dağları, enginlere sığmam, taşarım.</p>
+
+<p>Garbın afakını sarmışsa çelik zırhlı duvar,
+Benim iman dolu göğsüm gibi serhaddim var.
+Ulusun, korkma! Nasıl böyle bir imanı boğar,
+“Medeniyet” dediğin tek dişi kalmış canavar?</p>
+
+<p>Arkadaş! Yurduma alçakları uğratma sakın,
+Siper et gövdeni, dursun bu hayâsızca akın.
+Doğacaktır sana vadettiği günler Hakk’ın,
+Kim bilir, belki yarın belki yarından da yakın.</p>
+
+<p>Bastığın yerleri “toprak” diyerek geçme, tanı,
+Düşün altındaki binlerce kefensiz yatanı.
+Sen şehit oğlusun, incitme, yazıktır atanı,
+Verme, dünyaları alsan da bu cennet vatanı.</p>
+
+<p>Kim bu cennet vatanın uğruna olmaz ki feda?
+Şüheda fışkıracak, toprağı sıksan şüheda.
+Canı, cananı, bütün varımı alsın da Hüda,
+Etmesin tek vatanımdan beni dünyada cüda.</p>
+
+<p>Ruhumun senden İlahî, şudur ancak emeli:
+Değmesin mabedimin göğsüne namahrem eli.
+Bu ezanlar, ki şehadetleri dinin temeli,
+Ebedî, yurdumun üstünde benim inlemeli.</p>
+
+<p>O zaman vecd ile bin secde eder, varsa taşım,
+Her cerihamdan, İlahî, boşanıp kanlı yaşım,
+Fışkırır ruhumücerret gibi yerden naaşım,
+O zaman yükselerek arşa değer belki başım.</p>
+
+<p>Dalgalan sen de şafaklar gibi ey şanlı hilal!
+Olsun artık dökülen kanlarımın hepsi helal.
+Ebediyen sana yok, ırkıma yok izmihlal.
+Hakkıdır, hür yaşamış bayrağımın hürriyet;
+Hakkıdır, Hakk’a tapan milletimin istiklal.</p>
+
+            `;
+            break;
+            case 'bio2':
+    bioText.innerHTML = `
+    <h1>ANDIMIZ</h1>
+Türküm, doğruyum, çalışkanım,
+İlkem: küçüklerimi korumak, büyüklerimi saymak, yurdumu, milletimi özümden çok sevmektir. 
+Ülküm: yükselmek, ileri gitmektir.
+Ey Büyük Atatürk!
+Açtığın yolda, gösterdiğin hedefe durmadan yürüyeceğime ant içerim.
+Varlığım Türk varlığına armağan olsun.  
+Ne mutlu Türküm diyene!
+      `;
+        break;
+        case 'bio3':
+    bioText.innerHTML = `
+      <h1>GENÇLİĞE HİTABE</h1>
+        <p>   Ey Türk gençliği! Birinci vazifen; Türk istiklalini, Türk cumhuriyetini, ilelebet muhafaza ve müdafaa etmektir.
+
+   Mevcudiyetinin ve istikbalinin yegâne temeli budur. Bu temel, senin en kıymetli hazinendir. İstikbalde dahi seni bu hazineden mahrum etmek isteyecek dâhilî ve haricî bedhahların olacaktır. Bir gün, istiklal ve cumhuriyeti müdafaa mecburiyetine düşersen, vazifeye atılmak için içinde bulunacağın vaziyetin imkân ve şeraitini düşünmeyeceksin. Bu imkân ve şerait, çok namüsait bir mahiyette tezahür edebilir. İstiklal ve cumhuriyetine kastedecek düşmanlar, bütün dünyada emsali görülmemiş bir galibiyetin mümessili olabilirler. Cebren ve hile ile aziz vatanın bütün kaleleri zapt edilmiş, bütün tersanelerine girilmiş, bütün orduları dağıtılmış ve memleketin her köşesi bilfiil işgal edilmiş olabilir. Bütün bu şeraitten daha elim ve daha vahim olmak üzere, memleketin dâhilinde iktidara sahip olanlar, gaflet ve dalalet ve hatta hıyanet içinde bulunabilirler. Hatta bu iktidar sahipleri, şahsi menfaatlerini müstevlilerin siyasi emelleriyle tevhit edebilirler. Millet, fakruzaruret içinde harap ve bitap düşmüş olabilir.
+
+   Ey Türk istikbalinin evladı! İşte, bu ahval ve şerait içinde dahi vazifen, Türk istiklal ve cumhuriyetini kurtarmaktır. Muhtaç olduğun kudret, damarlarındaki asil kanda mevcuttur.</p>
+      `;
+        break;
+
+default:
+            bioText.innerHTML = 'Okuyun!';
+    }
+
+    figure.src = figureSrc; // Change the figure image
+}
+    // Example function to enable/disable scrolling
+    function toggleScroll() {
+        document.body.classList.toggle('no-scroll');
+    }
+
+    // Call toggleScroll() when you need to enable or disable scrolling
+    // For example, you can call it when a button is clicked:
+    document.getElementById('music-control').onclick = function() {
+        toggleScroll(); // Disable scrolling when the music control is clicked
+    };
+
+    const names = document.querySelectorAll('.name'); // Select all name elements
+
+names.forEach(name => {
+    name.addEventListener('click', function() {
+        // Here you should handle the text change for the center box
+        // Example: centerBox.textContent = "New Text"; // Change this line as per your logic
+        
+        // Scroll to the top of the center box
+        const centerBox = document.querySelector('.center-box');
+        centerBox.scrollTop = 0; // Set scroll position to the top
+    });
+});
+
+    </script>
+
+
+
+</body>
+</html>

@@ -13,7 +13,7 @@ body {
 
 header {
     background-color: #640000;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 nav {
@@ -53,7 +53,6 @@ nav ul li a:hover {
     width: 50px;
 }
 
-
 /* Flex container */
 .flex-container {
     display: flex;
@@ -64,20 +63,20 @@ nav ul li a:hover {
 
 /* Left Side (yan1) */
 .yan1 {
-    width: 20%;
+    flex: 0 0 20%; /* Maintain 20% width */
     margin-top: 70px;
     border-radius: 3px;
 }
 
 /* Middle section with Slideshow */
 .content-section2 {
-    width: 60%; /* Keep it 60% for larger screens */
+    flex: 0 0 60%; /* Maintain 60% width */
     margin: 0 20px;
     margin-top: 110px;
     position: relative;
 }
 .mySlides {
-    height: 450px; /* Keep this to maintain overall slideshow height */
+    height:100%; /* Keep this to maintain overall slideshow height */
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 0, 0, 0.8)), url('img/eskitme-doku.png') no-repeat center center;
     background-size: cover;
     border: 8px solid rgb(168, 130, 72);
@@ -87,16 +86,12 @@ nav ul li a:hover {
     overflow: hidden; /* Ensures that content does not overflow */
 }
 
-.mySlides img {
+.mySlides img, .mySlides video {
     width: 100%;
-    height: auto; /* Change this to auto to maintain aspect ratio */
+    height: 100%; /* Keep the aspect ratio */
     object-fit: cover; /* Ensures the image covers the full area without distortion */
 }
-.mySlides video {
-    width: 100%;
-    height: auto; /* Change this to auto to maintain aspect ratio */
-    object-fit: cover; /* Ensures the image covers the full area without distortion */
-}
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -123,7 +118,7 @@ nav ul li a:hover {
 
 /* Right Side (yan2) */
 .yan2 {
-    width: 20%;
+    flex: 0 0 20%; /* Maintain 20% width */
     margin-top: 70px;
     border-radius: 3px;
 }
@@ -141,7 +136,7 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 30%;
+    width: 30%; /* Maintain width for cards */
     margin-bottom: 20px; /* Add some spacing between rows */
 }
 
@@ -242,12 +237,12 @@ a img:hover {
     }
 
     .yan1, .yan2 {
-        width: 100%; /* Full width for side images */
+        flex: 0 0 100%; /* Full width for side images */
         margin-top: 30px;
     }
 
     .content-section2 {
-        width: 100%; /* Full width for content section */
+        flex: 0 0 100%; /* Full width for content section */
         margin: 20px 0; /* Space above and below */
     }
 
@@ -276,7 +271,7 @@ a img:hover {
     }
 
     .content-section2 {
-        width: 100%; /* Full width for content section */
+        flex: 0 0 100%; /* Full width for content section */
         margin-top: 20px;
     }
 
@@ -313,7 +308,7 @@ a img:hover {
     border: 2px solid #640000; /* White border */
     border-radius: 10px;
     padding: 20px;
-    max-width: 800px;
+    max-width: 600px;
     text-align: center;
     position: relative; /* To position close button */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */

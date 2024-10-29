@@ -25,6 +25,18 @@ header {
     padding: 10px 0;
 }
 
+/* Figure gizleme */
+.figure {
+    display: block; /* Varsayılan olarak görünür */
+}
+
+/* 768px ve altındaki ekranlarda gizle */
+@media (max-width: 768px) {
+    .figure {
+        display: none; /* Mobilde gizle */
+    }
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -54,10 +66,10 @@ nav ul li a:hover {
 
 /* Ribbon */
 .kurdele img {
+    margin-top: -20px;
     width: 50px;
     position: absolute;
     left: 10px;
-    margin-top: -25px;
 }
 
 /* Main Content Styling */
