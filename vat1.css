@@ -148,10 +148,6 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
-footer {
-    background-color: #640000;
-    padding: 15px;
-}
 
 .footer-content {
     display: flex;                     /* Use Flexbox for layout */
@@ -162,10 +158,26 @@ footer {
     position: relative;                /* Position relative for absolute centering */
 }
 
-.footer-text {
-    flex: 1;                           /* Allow text to take available space */
-    text-align: center;                /* Center the text */
+/* Footer Styling */
+footer {
+    background-color: #640000;
+    padding: 15px;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+}
+
 
 .social-media {
     display: flex;                     /* Use Flexbox for social media icons */

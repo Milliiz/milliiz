@@ -25,9 +25,8 @@ header {
     padding: 10px 0;
     z-index: 1;
 }
-
+/* Footer Styling */
 footer {
-    margin-top: 11px;
     background-color: #640000;
     padding: 15px;
 }
@@ -38,13 +37,14 @@ footer {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .footer-text {
     flex: 1;
     text-align: center;
-    color: #fff;
 }
+
 
 .social-media {
     display: flex;
