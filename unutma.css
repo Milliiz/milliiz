@@ -41,6 +41,7 @@ footer {
 }
 
 .footer-text {
+    color: #fff;
     flex: 1;
     text-align: center;
 }
