@@ -239,6 +239,8 @@ main {
 footer {
     background-color: #640000;
     padding: 15px;
+    position: relative; /* Fixed konumunu kaldırdık */
+
 }
 
 .footer-content {
