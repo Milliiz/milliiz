@@ -154,6 +154,10 @@ main {
 
 /* Tablet */
 @media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Mobilde dikey kaydırmayı etkinleştirir */
+    }
+
     nav ul li {
         padding: 0 10px;
     }
@@ -179,6 +183,10 @@ main {
 
 /* Mobile */
 @media (max-width: 480px) {
+    body {
+        overflow-y: auto; /* Mobilde dikey kaydırmayı etkinleştirir */
+    }
+
     nav ul {
         flex-direction: column; /* Stacks navigation items */
         align-items: center; /* Center items */

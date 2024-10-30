@@ -76,7 +76,7 @@ nav ul li a:hover {
     position: relative;
 }
 .mySlides {
-    height:100%; /* Keep this to maintain overall slideshow height */
+    height: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 0, 0, 0.8)), url('img/eskitme-doku.png') no-repeat center center;
     background-size: cover;
     border: 8px solid rgb(168, 130, 72);
