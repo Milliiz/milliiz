@@ -7,18 +7,13 @@
 }
 
 body {
-    color: #fff;
+    background: linear-gradient(to bottom, #3a3535, #292323);
     height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
-header {
-    background-color: #640000;
-    padding: 10px 20px; /* Add some padding for better spacing */
-    z-index: 1;
-}
 
 nav {
     display: flex;
@@ -237,8 +232,10 @@ main {
 
 /* Footer Styling */
 footer {
-    background-color: #640000;
-    padding: 15px;
+    background: linear-gradient(to bottom, rgba(13, 12, 12, 0.9), rgba(41, 35, 35, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color:rgba(13, 12, 12, 0.874);    padding: 15px;
     position: relative; /* Fixed konumunu kaldırdık */
 
 }
@@ -278,4 +275,11 @@ a:visited, a:active, a:hover {
 .linkedin-link a{
 color: #fff;
 
+}
+header {
+    background-color: rgba(13, 12, 12, 0.874);
+    background: linear-gradient(to bottom, rgba(13, 12, 12, 0.9), rgba(31, 27, 27, 0.9));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    transition: background-color 0.2s ease; /* Smooth transition */
+    padding: 10px 0;
 }
