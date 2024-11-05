@@ -1,365 +1,375 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Pridi', Arial, sans-serif;
-}
-
-body {
-    background-color: #8b0000;
-    color: #fff;
-}
-
-header {
-    background-color: #640000;
-    padding: 10px 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between menu items */
-}
-
-.kurdele {
-    position: absolute;
-    left: 10px; /* Fixed to the left */
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #dcdcdc;
-}
-
-.kurdele img {
-    width: 50px;
-}
-
-.logo img {
-    width: 50px;
-}
-
-/* Flex container */
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* Adjusts space between items */
-    align-items: flex-start;
-    padding: 40px;
-}
-
-/* Left Side (yan1) */
-.yan1 {
-    flex: 0 0 20%; /* Maintain 20% width */
-    margin-top: 70px;
-    border-radius: 3px;
-}
-
-/* Middle section with Slideshow */
-.content-section2 {
-    flex: 0 0 60%; /* Maintain 60% width */
-    margin: 0 20px;
-    margin-top: 110px;
-    position: relative;
-}
-.mySlides {
-    height: 100%;
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 0, 0, 0.8)), url('img/eskitme-doku.png') no-repeat center center;
-    background-size: cover;
-    border: 8px solid rgb(168, 130, 72);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden; /* Ensures that content does not overflow */
-}
-
-.mySlides img, .mySlides video {
-    width: 100%;
-    height: 100%; /* Keep the aspect ratio */
-    object-fit: cover; /* Ensures the image covers the full area without distortion */
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Right Side (yan2) */
-.yan2 {
-    flex: 0 0 20%; /* Maintain 20% width */
-    margin-top: 70px;
-    border-radius: 3px;
-}
-
-/* Cards */
-.content-section {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.card {
-    background-color: #640000;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 30%; /* Maintain width for cards */
-    margin-bottom: 20px; /* Add some spacing between rows */
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 14px;
-}
-
-
-.footer-content {
-    display: flex;                     /* Use Flexbox for layout */
-    justify-content: space-between;    /* Space between text and icons */
-    align-items: center;               /* Center items vertically */
-    max-width: 1200px;                /* Optional: max width for the footer */
-    margin: 0 auto;                   /* Center the footer content */
-    position: relative;                /* Position relative for absolute centering */
-}
-
-/* Footer Styling */
-footer {
-    background-color: #640000;
-    padding: 15px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.footer-text {
-    flex: 1;
-    text-align: center;
-}
-
-
-.social-media {
-    display: flex;                     /* Use Flexbox for social media icons */
-}
-
-.social-media a {
-    margin-left: 10px;                /* Space between icons */
-}
-
-.social-media img {
-    width: 24px;                      /* Adjust size as needed */
-    height: 24px;
-    vertical-align: middle;           /* Aligns icon with text */
-}
-
-/* Music Control */
-#music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-#music-control:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-
-
-a img {
-    transition: transform 0.3s ease;
-}
-
-a img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive Adjustments */
-
-/* Tablet */
-@media (max-width: 768px) {
-    nav ul li {
-        padding: 0 10px;
+    /* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Pridi', Arial, sans-serif;
     }
 
-    .kurdele img {
-        margin-left: -50px;
+    body {
+        background: linear-gradient(to bottom, #3a3535, #292323);
+        color: #fff;
     }
 
-    .flex-container {
-        flex-direction: column; /* Stacks elements on top of each other */
+    header {
+        background-color: rgba(13, 12, 12, 0.874);
+        background: linear-gradient(to bottom, rgba(13, 12, 12, 0.9), rgba(31, 27, 27, 0.9));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+        transition: background-color 0.2s ease; /* Smooth transition */
+        padding: 10px 0;
+    }
+
+    nav {
+        display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
-    .yan1, .yan2 {
-        flex: 0 0 100%; /* Full width for side images */
-        margin-top: 30px;
-    }
-
-    .content-section2 {
-        flex: 0 0 100%; /* Full width for content section */
-        margin: 20px 0; /* Space above and below */
-    }
-
-    .card {
-        width: 90%; /* Make cards take more width */
-    }
-
-    #music-control {
-        font-size: 0.8em;
-        padding: 8px 10px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
     nav ul {
-        flex-direction: column; /* Stacks navigation items */
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Space between menu items */
+    }
+
+    .kurdele {
+        position: absolute;
+        left: 10px; /* Fixed to the left */
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: #dcdcdc;
     }
 
     .kurdele img {
-        margin-left: 0;
+        width: 50px;
     }
 
-    .yan1, .yan2 {
-        margin-top: 10px;
+    .logo img {
+        width: 50px;
     }
 
+    /* Flex container */
+    .flex-container {
+        display: flex;
+        justify-content: space-between; /* Adjusts space between items */
+        align-items: flex-start;
+        padding: 40px;
+    }
+
+    /* Left Side (yan1) */
+    .yan1 {
+        flex: 0 0 20%; /* Maintain 20% width */
+        margin-top: 70px;
+        border-radius: 3px;
+    }
+
+    /* Middle section with Slideshow */
     .content-section2 {
-        flex: 0 0 100%; /* Full width for content section */
-        margin-top: 20px;
+        flex: 0 0 60%; /* Maintain 60% width */
+        margin: 0 20px;
+        margin-top: 110px;
+        position: relative;
+    }
+    .mySlides {
+        height: 100%;
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(100, 0, 0, 0.8)), url('img/eskitme-doku.png') no-repeat center center;
+        background-size: cover;
+        border: 8px solid rgb(168, 130, 72);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden; /* Ensures that content does not overflow */
+    }
+
+    .mySlides img, .mySlides video {
+        width: 100%;
+        height: 100%; /* Keep the aspect ratio */
+        object-fit: cover; /* Ensures the image covers the full area without distortion */
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Right Side (yan2) */
+    .yan2 {
+        flex: 0 0 20%; /* Maintain 20% width */
+        margin-top: 70px;
+        border-radius: 3px;
+    }
+
+    /* Cards */
+    .content-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
 
     .card {
-        width: 100%; /* Cards take full width */
+        background-color:  rgba(13, 12, 12, 0.874);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 30%; /* Maintain width for cards */
+        margin-bottom: 20px; /* Add some spacing between rows */
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+
+    .footer-content {
+        display: flex;                     /* Use Flexbox for layout */
+        justify-content: space-between;    /* Space between text and icons */
+        align-items: center;               /* Center items vertically */
+        max-width: 1200px;                /* Optional: max width for the footer */
+        margin: 0 auto;                   /* Center the footer content */
+        position: relative;                /* Position relative for absolute centering */
+    }
+
+    /* Footer Styling */
+    footer {
+        background: linear-gradient(to bottom, rgba(13, 12, 12, 0.9), rgba(41, 35, 35, 0.9));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+        transition: background-color 0.3s ease; /* Smooth transition */
+        background-color:rgba(13, 12, 12, 0.874);
         padding: 15px;
     }
 
-    #music-control {
-        font-size: 0.7em;
-        padding: 5px 8px;
-        top: 15px;
-        right: 15px;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
     }
-}
 
-/* Notification Popup Styles */
-#notification {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dimmed background */
-    backdrop-filter: blur(5px); /* Blur effect */
-    z-index: 9999; /* On top of other content */
-}
+    .footer-text {
+        flex: 1;
+        text-align: center;
+    }
 
-.notification-content {
-    background: #fff;
-    border: 2px solid #640000; /* White border */
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    position: relative; /* To position close button */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
-}
 
-.notification-content h2 {
-    margin-bottom: 10px;
-}
+    .social-media {
+        display: flex;                     /* Use Flexbox for social media icons */
+    }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #640000; /* Color of close button */
-}
+    .social-media a {
+        margin-left: 10px;                /* Space between icons */
+    }
 
-/* Responsive Adjustments for Notification */
-@media (max-width: 480px) {
+    .social-media img {
+        width: 24px;                      /* Adjust size as needed */
+        height: 24px;
+        vertical-align: middle;           /* Aligns icon with text */
+    }
+
+    /* Music Control */
+    #music-control {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9em;
+        z-index: 1000;
+        transition: background-color 0.3s;
+    }
+
+    #music-control:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+
+
+    a img {
+        transition: transform 0.3s ease;
+    }
+
+    a img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsive Adjustments */
+
+    /* Tablet */
+    @media (max-width: 768px) {
+        nav ul li {
+            padding: 0 10px;
+        }
+
+        .kurdele img {
+            margin-left: -50px;
+        }
+
+        .flex-container {
+            flex-direction: column; /* Stacks elements on top of each other */
+            align-items: center;
+        }
+
+        .yan1, .yan2 {
+            flex: 0 0 100%; /* Full width for side images */
+            margin-top: 30px;
+        }
+
+        .content-section2 {
+            flex: 0 0 100%; /* Full width for content section */
+            margin: 20px 0; /* Space above and below */
+        }
+
+        .card {
+            width: 90%; /* Make cards take more width */
+        }
+
+        #music-control {
+            font-size: 0.8em;
+            padding: 8px 10px;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        nav ul {
+            flex-direction: column; /* Stacks navigation items */
+        }
+
+        .kurdele img {
+            margin-left: 0;
+        }
+
+        .yan1, .yan2 {
+            margin-top: 10px;
+        }
+
+        .content-section2 {
+            flex: 0 0 100%; /* Full width for content section */
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 100%; /* Cards take full width */
+            padding: 15px;
+        }
+
+        #music-control {
+            font-size: 0.7em;
+            padding: 5px 8px;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    /* Notification Popup Styles */
     #notification {
-        padding: 10px; /* Adjust padding for small screens */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7); /* Dimmed background */
+        backdrop-filter: blur(5px); /* Blur effect */
+        z-index: 9999; /* On top of other content */
+    }
+
+    .notification-content {
+        background: #fff;
+        border: 2px solid #640000; /* White border */
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 600px;
+        text-align: center;
+        position: relative; /* To position close button */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    }
+
+    .notification-content h2 {
+        margin-bottom: 10px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #640000; /* Color of close button */
+    }
+
+    /* Responsive Adjustments for Notification */
+    @media (max-width: 480px) {
+        #notification {
+            padding: 10px; /* Adjust padding for small screens */
+        }
+        
+        .notification-content {
+            width: 90%; /* Full width for smaller screens */
+        }
+    }
+
+
+
+    a {
+        color: fff;   
+        text-decoration: none;
+    }
+
+    a:visited, a:active, a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+    .biz {
+        margin-top: -30px;
+        display: flex; /* İçindeki bağlantıları yan yana yerleştirir */
+        gap: 15px; /* Bağlantılar arasında boşluk */
+        margin-right: 200px;
+    }
+    .footer a {
+        background: linear-gradient(to bottom, rgba(13, 12, 12, 0.9), rgba(41, 35, 35, 0.9));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+        transition: background-color 0.3s ease; /* Smooth transition */
+        color: #fff;
+        margin-left: 100px;
+        font-size: 0.8em;
     }
     
-    .notification-content {
-        width: 90%; /* Full width for smaller screens */
-    }
-}
-
-
-
-a {
-    color: fff;   
-    text-decoration: none;
-}
-
-a:visited, a:active, a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-.biz {
-    margin-top: -30px;
-    display: flex; /* İçindeki bağlantıları yan yana yerleştirir */
-    gap: 15px; /* Bağlantılar arasında boşluk */
-    margin-right: 200px;
-}
-.footer a {
-    color: #fff;
-    margin-left: 100px;
-    font-size: 0.8em;
-}
